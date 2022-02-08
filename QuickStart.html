@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <style type="text/css">
+        .code {
+          font-family:Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New;
+        }
+      </style>
+        <title>Quick Start</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h2> Creating the webpage. </h2>
+        <p>  
+            Code for the webpage. Copy the contents of the webpage.<br/>
+            <a href = "ExampleWebpage.html">Link</a><br/>
+            Replace "path/to/game.js" with the path to your game and "path/to/images" with the path to your images.<br/>
+            To change the size of the canvas change "width="500" height="500"" of the canvas to the desired size.<br/>
+            <br/>
+            Use the below code for setting up the game.<br/>
+            <a href = "exampleCode.js">Link</a><br/>
+            This will load the images listed in "GAMEIMAGES". Once all of the images are loaded, the start game function will be called. Other methods that don't require the art can still be called while this is happening. For example, loading highscores. <br/>
+            In the startGame function, place code that will be called once the game has loaded all needed data. <br/>
+        </p>
+        <h2> Creating an Object </h2>
+        <p>  
+            To create a new object, use: <br/>
+            <span class="code"> var newObject = new GameObject(50, 50) </span> <br/>
+            This will create an object at position (50,50), near the top left of the sceen. These values are in pixels and can be changed to place the object at other places on the screen.<br/>
+            In addtion, the obect can be modified to have a size (in pixels) and to be visible. <br/>
+            <span class="code"> newObject.xSize = 32; newObject.ySize = 32; newObject.visible = true; </span> <br/>
+            A renderer must be added to the object to give it a graphical representation. For example: <br/>
+            <span class="code"> newRend = new SolidRenderer(newObject, 'black') </span> <br/>
+            This will make the object show up as a black square. <br/>
+            <br/>
+        </p>
+        <h2> Adding Behavior </h2>
+        <p>  
+            To make the above object move you will have to add a component to it. <br/>
+            The only required part of a component is an update function. The below code will create a move script. <br/>
+            <span class="code">
+            var moveScript = {update: move}<br/>
+            <br/>
+            function move () {<br/>
+            &emsp; this.parent.x += 1 <br/>
+            } </span><br/>
+            <span class="code">"this.parent"</span> will refer to the game object it is attached to. So by using <span class="code">"this.parent.x"</span> the position of the object is accessed. Update is called once per frame resulting in the object moving.<br/>
+            To add the script to the Object, use:<br/>
+            <span class="code">newObject.addScript(moveScript)</span><br/>
+            <br/>
+            More Objects and components can be added to create a game.<br/>
+        </p>
+        <p>  
+            <a href = "GalleryHome.html">Return to Menu</a>
+        </p>
+    </body>
+</html>

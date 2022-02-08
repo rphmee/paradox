@@ -1,0 +1,5 @@
+Cops and Robbers:
+
+Changes to engine:
+-Changed Grid to allow the grid to be created with a value other than 0.
+-Added removeChild method to unlink a child from its parent.

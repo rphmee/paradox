@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Documentation</title>
+    </head>
+    <body>
+        <p>  
+            <a href = "GalleryHome.html">Return to Menu</a>
+        </p>
+        
+        <p>  
+Engine Base<br/>
+            canvas:<br/>
+            Variable.<br/>
+            Loaded automatically as part of initializing the engine.<br/>
+            Used to get information about the canvas. For example: width and height.<br/>
+            <br/>
+            worldObject:<br/>
+            Variable.<br/>
+            Base of the tree of ordered Objects<br/>
+            <br/>
+            camera:<br/>
+            Variable.<br/>
+            Cameras are used to make moving around the game world easier.<br/>
+            Leaving it as undefined draws directly to the canvas.<br/>
+            <br/>
+            GameObject<br/>
+            Class.<br/>
+            constructor (xpos, ypos, rot, anchorX, anchorY, scaleX, scaleY, dirX, dirY, attached)<br/>
+            Represents all objects in the game. Can attach components to a GameObject.<br/>
+            <br/>
+            Player<br/>
+            Class.<br/>
+            constructor (id)<br/>
+            Creates a Player object with an id and a default Controller.<br/>
+            <br/>
+            Controller<br/>
+            Class.<br/>
+            constructor ()<br/>
+            Creates a Controller object that holds a mapping of input keys to actions. Controllers can vary from player to player.<br/>
+            <br/>
+            input:<br/>
+            Variable.<br/>
+            Handles input for the player.<br/>
+            <br/>
+            function preloadArtAssets (path, names, callback)<br/>
+            Loads the desired assets from their location in storage.<br/>
+            <br/>
+            Renderers<br/>
+            SpriteSheetRenderer<br/>
+            Class.<br/>
+            constructor (gameObject, imageSource, depth, anchorX, anchorY, sprites, xSize, ySize, height, width, orientation, delay)<br/>
+            Handles the rendering of a specific animated sprite sheet.<br/>
+            <br/>
+            ImageRenderer<br/>
+            Class.<br/>
+            constructor (gameObject, imageSource, depth, anchorX, anchorY, drawAsUI)<br/>
+            Handles the rendering of a specific image.<br/>
+            <br/>
+            SolidRenderer<br/>
+            Class.<br/>
+            constructor (gameObject, color, shape, depth, drawAsUI)<br/>
+            Handles the rendering of a basic shape with a flat color.<br/>
+            <br/>
+            TextRenderer <br/>
+            Class.<br/>
+            constructor (gameObject, text, font, size, color, styles, depth, drawAsUI)<br/>
+            Handles the rendering of text.<br/>
+            <br/>
+            Component<br/>
+            More of a blueprint than a portion of the code.<br/>
+            An object with the update field set to a function. When it is attached to gameobject it will be called once per frame. The component can access the gameobject using this.parent.
+            <br/>
+            Utility<br/>
+            <br/>
+            Grid<br/>
+            Class.<br/>
+            A class for initializing a 2 dimensional array and initializing the content to a given value. <br/>
+            <br/>
+            Vector2<br/>
+            Class.<br/>
+            Object with X, Y coordinates with access to commonly used Vector operations.<br/>
+            <br/>
+            Physics<br/>
+            Class<br/>
+            constructor (gameObject, dx, dy, target)<br/>
+            A Component for adding basic physics behavior to a object<br/>
+            <br/>
+            RectCircleColliding<br/>
+            function RectCircleColliding (circleX, circleY, circleRad, rectX, rectY, rectW, rectH, rot)<br/>
+            Checks for overlap between a circle and a rectangle. Used in collision detection but also useful for other cases.<br/>
+            <br/>
+            removeGameObject<br/>
+            function removeGameObject (current, gameObject)<br/>
+            Removes a gameObject and its renderers from the game.<br/>
+            <br/>
+            removeChild<br/>
+            function removeChild(parent, child)<br/>
+            Removes a child from its parent, but does not remove the child from the game.<br/>
+            <br/>
+            findObjectByTag<br/>
+            function findObjectByTag (current, tag)<br/>
+            Finds the first gameObject with a given tag and returns it.<br/>
+            <br/>
+            findAllObjectsByTag<br/>
+            function findAllObjectsByTag (current, tag)<br/>
+            Finds all objects with a given tag and returns them as an array.<br/>
+            <br/>
+            getObjectUnderMouse<br/>
+            function getObjectUnderMouse (current)<br/>
+            Finds the first object under the mouse pointer and returns it.<br/>
+            <br/>
+            getCollision<br/>
+            function getCollision (xpos, ypos, testObject, current)<br/>
+            Check for overlap collision. Returns the colliding gameObject.<br/>
+            <br/>
+            draw_rect_border<br/>
+            function draw_rect_border (xStart, yStart, w, h, lineWidth, col)<br/>
+            Draws a rectangular border.<br/>
+            <br/>
+            screenSpaceToWorldSpace<br/>
+            function screenSpaceToWorldSpace (screenSpace)<br/>
+            Function for converting a position on the screen to a position in the world when a camera is being used.<br/>
+            <br/>
+            setCookie<br/>
+            function setCookie (cookiename, cookievalue, experationdays)<br/>
+            Sets a cookie to a given value. Negative values of days clear the cookie.<br/>
+            <br/>
+            getCookie<br/>
+            function getCookie (cookiename)<br/>
+            Get a previously saved cookie.<br/>
+            <br/>
+            angleToVector<br/>
+            function angleToVector (angle)<br/>
+            Converts an angle into a Vector2.<br/>
+            <br/>
+            raycast<br/>
+            function raycast (v1, v2)<br/>
+            Gets the difference between the two given vectors creating a ray from v1 to v2.<br/>
+            <br/>
+            degrees_to_radians<br/>
+            function degrees_to_radians (degrees)<br/>
+            Convert degrees to radians.<br/>
+            <br/>
+            radians_to_degrees<br/>
+            function radians_to_degrees (radians)<br/>
+            Convert radians to degrees.<br/>
+            <br/>
+            getWorldPosX<br/>
+            function getWorldPosX (obj)<br/>
+            Get the x component of the object's position in the world.<br/>
+            <br/>
+            getWorldPosY<br/>
+            function getWorldPosY (obj)<br/>
+            Get the y component of the object's position in the world.<br/>
+            <br/>
+            turnToTarget<br/>
+            function turnToTarget (obj, targX, targY) <br/>
+            Turn the gameObject (obj) to face target X, Y (targX, targY)<br/>
+            <br/>
+            rotateComponents<br/>
+            function rotateComponents (obj, rot) <br/>   
+            Rotate the anchor point of gameObject's (obj) children and renders/children to follow rotation.<br/>           
+        </p>
+        <p>  
+            <a href = "GalleryHome.html">Return to Menu</a>
+        </p>
+    </body>
+</html>
